@@ -9,7 +9,7 @@ Sistema de agendamentos com integração a calendário, feito com Laravel, React
 - Usuário pode ser `admin`, `prestador` ou `cliente`.
 - Cada tipo de usuário tem permissões específicas.
 - Login e registro requerem e-mail único e senha (mínimo 6 caracteres).
-- JWT (ou Sanctum) é usado para autenticação segura.
+- Sanctum para autenticação segura.
 - E-mail pode ser verificado (opcional para MVP).
 
 ---
@@ -46,7 +46,7 @@ Sistema de agendamentos com integração a calendário, feito com Laravel, React
 - Agendamento exige: prestador, serviço, data e horário.
 - Conflitos de horário são evitados automaticamente.
 - Agendamento é confirmado automaticamente (ou manualmente, se ativado).
-- Cliente pode cancelar até **X horas antes**.
+- Cliente pode cancelar até **X horas antes** (definido pelo prestador na hora de cadastrar um serviço).
 - Prestador pode cancelar a qualquer momento.
 - Agendamentos passados não podem ser modificados.
 
@@ -89,7 +89,7 @@ Sistema de agendamentos com integração a calendário, feito com Laravel, React
 
 ---
 
-## 📅 Integração com Google Calendar (opcional)
+## 📅 Integração com Google Calendar
 
 - Prestadores podem conectar suas contas Google.
 - Agendamentos confirmados são enviados ao Google Calendar.
@@ -104,12 +104,12 @@ Sistema de agendamentos com integração a calendário, feito com Laravel, React
 
 ---
 
-## 💳 Pagamento (opcional)
+## 💳 Pagamento 
 
 - Cliente pode pagar no momento do agendamento.
-- Formas de pagamento: Stripe, Pix ou MercadoPago.
+- Formas de pagamento: MercadoPago.
 - Agendamento só é confirmado após pagamento.
-- Reembolsos automáticos disponíveis até **X horas antes**.
+- Reembolsos automáticos disponíveis até **X horas antes**. (configurado pelo prestador no cadastro)
 
 ---
 
