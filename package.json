@@ -1,0 +1,35 @@
+{
+  "name": "agendaPRO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Biguelini/agendaPRO.git",
+  "author": "Biguelini <biguelinijoao@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2"
+  },
+  "scripts": {
+    "prepare": "husky install",
+	"commit": "git-cz"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
