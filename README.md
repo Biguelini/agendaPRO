@@ -10,7 +10,6 @@ Sistema de agendamentos com integração a calendário, feito com Laravel, React
 - Cada tipo de usuário tem permissões específicas.
 - Login e registro requerem e-mail único e senha (mínimo 6 caracteres).
 - Sanctum para autenticação segura.
-- E-mail pode ser verificado (opcional para MVP).
 
 ---
 
